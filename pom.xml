@@ -69,7 +69,7 @@
         <module>bootstrap-core</module>
         <module>bootstrap-core-optional</module>
         <module>bootstrap</module>
-        <module>bootstrap-java9</module>
+        <!--<module>bootstrap-java9</module>-->
         <module>collector</module>
         <module>commons</module>
         <module>commons-hbase</module>
@@ -90,8 +90,8 @@
     <properties>
         <encoding>UTF-8</encoding>
         <jdk.version>1.6</jdk.version>
-        <jdk.home>${env.JAVA_6_HOME}</jdk.home>
-        <test.jdk.home>${jdk.home}</test.jdk.home>
+       <!-- <jdk.home>${env.JAVA_6_HOME}</jdk.home>-->
+        <!--<test.jdk.home>${jdk.home}</test.jdk.home>-->
 
         <!-- library -->
         <slf4j.version>1.7.21</slf4j.version>
@@ -742,7 +742,7 @@
                     <encoding>${encoding}</encoding>
                     <showDeprecation>true</showDeprecation>
                     <compilerVersion>${jdk.version}</compilerVersion>
-                    <executable>${jdk.home}/bin/javac</executable>
+                    <!--<executable>${jdk.home}/bin/javac</executable>-->
                 </configuration>
             </plugin>
             <plugin>
@@ -817,7 +817,7 @@
                                 <requireJavaVersion>
                                     <version>1.8</version>
                                 </requireJavaVersion>
-                                <requireEnvironmentVariable>
+                              <!--  <requireEnvironmentVariable>
                                     <variableName>JAVA_HOME</variableName>
                                 </requireEnvironmentVariable>
                                 <requireEnvironmentVariable>
@@ -831,7 +831,7 @@
                                 </requireEnvironmentVariable>
                                 <requireEnvironmentVariable>
                                     <variableName>JAVA_9_HOME</variableName>
-                                </requireEnvironmentVariable>
+                                </requireEnvironmentVariable>-->
                             </rules>
                             <fail>true</fail>
                         </configuration>

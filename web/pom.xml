@@ -164,7 +164,7 @@
             <artifactId>spring-messaging</artifactId>
             <version>${spring.version}</version>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework.security</groupId>
             <artifactId>spring-security-web</artifactId>
@@ -326,14 +326,14 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+        <!--<dependency>
             <groupId>com.navercorp.pinpoint</groupId>
             <artifactId>pinpoint-rpc</artifactId>
             <version>${project.version}</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
-
+-->
     </dependencies>
 
     <build>
@@ -379,13 +379,15 @@
                         <configuration>
                             <target>
                                 <copy todir="${basedir}/target/grunt" failonerror="true" verbose="true">
-                                    <fileset dir="${basedir}/src/grunt" />
+                                    <fileset dir="${basedir}/src/grunt"/>
                                 </copy>
                                 <copy todir="${basedir}/target/main/webapp" failonerror="true" verbose="true">
-                                    <fileset dir="${basedir}/src/main/webapp" />
+                                    <fileset dir="${basedir}/src/main/webapp"/>
                                 </copy>
-                                <copy file="${basedir}/src/Gruntfile.js" tofile="${basedir}/target/Gruntfile.js" failonerror="true" verbose="true" />
-                                <copy file="${basedir}/src/package.json" tofile="${basedir}/target/package.json" failonerror="true" verbose="true" />
+                                <copy file="${basedir}/src/Gruntfile.js" tofile="${basedir}/target/Gruntfile.js"
+                                      failonerror="true" verbose="true"/>
+                                <copy file="${basedir}/src/package.json" tofile="${basedir}/target/package.json"
+                                      failonerror="true" verbose="true"/>
                             </target>
                         </configuration>
                     </execution>
